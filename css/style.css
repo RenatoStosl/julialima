@@ -734,6 +734,39 @@ nav {
   color: var(--blush);
 }
 
+.whatsapp-float {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 120;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow:
+    0 0 0 10px rgba(37, 211, 102, 0.14),
+    0 12px 28px rgba(37, 211, 102, 0.34);
+  transition:
+    background 0.3s,
+    box-shadow 0.3s,
+    transform 0.3s;
+}
+.whatsapp-float:hover {
+  background: #1fbd5a;
+  box-shadow:
+    0 0 0 12px rgba(37, 211, 102, 0.18),
+    0 16px 34px rgba(37, 211, 102, 0.42);
+  transform: translateY(-3px);
+}
+.whatsapp-float svg {
+  display: block;
+}
+
 /* ANIMATIONS */
 @keyframes fadeUp {
   from {
@@ -784,8 +817,16 @@ nav {
     padding: 7rem 1.8rem 3rem;
   }
   .hero-right {
-    height: 100vw;
+    height: auto;
     min-height: 280px;
+    top: 0;
+    background: var(--cream);
+  }
+  .hero-photo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
   }
   .hero-photo-overlay {
     background: linear-gradient(to bottom, var(--cream) 0%, transparent 20%);
@@ -870,5 +911,11 @@ nav {
     flex-direction: column;
     gap: 0.8rem;
     text-align: center;
+  }
+  .whatsapp-float {
+    right: 1.2rem;
+    bottom: 1.2rem;
+    width: 54px;
+    height: 54px;
   }
 }
